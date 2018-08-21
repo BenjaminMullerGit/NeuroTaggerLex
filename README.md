@@ -3,13 +3,13 @@
 
 ## Environment set up  
 
-sh environment_setup/env_setup_tagger.sh 
+sh ./environment_setup/env_setup_tagger.sh 
 
 ## Data, word embedding and lexicons
 
 ### CONLL-U 
 
-cd data 
+cd ./data 
 
 curl --remote-name-all https://lindat.mff.cuni.cz/repository/xmlui/bitstream/handle/11234/1-2837/ud-treebanks-v2.2.tgz
 
@@ -29,7 +29,7 @@ gunzip cc.$lang.300.vec.gz
 
 ### Lexicons 
 
-cd lexicons 
+cd ./lexicons 
 
 wget http://atoll.inria.fr/~sagot/UDLexicons.0.2.zip
 
@@ -39,7 +39,5 @@ unzip UDLexicons.0.2.zip
 
 ## Train and evaluate a model 
 
-Define the three environment variables  PROJECT_PATH, REPORT_PATH and  WORD_EMBEDDING_PATH
-
-Then you can follow demo.sh by running fit.py score.py 
+Follow ./demo.sh 
 
