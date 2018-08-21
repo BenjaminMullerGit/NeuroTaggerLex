@@ -5,7 +5,7 @@
 conda create -n tagger python=3.6 anaconda
 source activate tagger
 conda install pytorch=0.3.1 -c soumith
-conda install gensim=0.13
+conda install gensim=3.4
 conda install tqdm
 conda install -c conda-forge matplotlib 
 

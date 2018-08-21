@@ -3,11 +3,11 @@
 
 # RUNNING AND EVALUATING A SINGLE MODEL 
 
-export PROJECT_PATH=/Users/benjaminmuller/Desktop/Work/INRIA/dev/parsing/NeuroTagger
-export REPORT_PATH=/Users/benjaminmuller/Desktop/Work/INRIA/dev/parsing/NeuroTagger/reports
-export WORD_EMBEDDING_PATH=/Users/benjaminmuller/Desktop/Work/INRIA/dev/parsing/data/ud/supdata/ud-2.0-baselinemodel-train-embeddings
+export PROJECT_PATH=.../NeuroTagger
+export REPORT_PATH=.../NeuroTagger/reports
+export WORD_EMBEDDING_PATH=...
 
-source activate neuroNLP2_3
+source activate tagger
 
 MODEL_ID=model
 RUN_ID=run
@@ -20,6 +20,3 @@ python $PROJECT_PATH/score.py --data_set ${DATA_SET} --run_id $RUN_ID --model_id
 python $PROJECT_PATH/evaluation/conll18_ud_eval.py $PROJECT_PATH/models/${RUN_ID}_rid-${MODEL_ID}_id-${DATA_SET}_data/${MODEL_ID}-SCORE-pred_test ../data/release-2.2-st-train-dev-data-NORMALIZED/ud-${DATA_SET}/${DATA_SET}-ud-dev.conllu -v
 
 
-# RUNNING AND EVALUATING SEVERAL MODELS 
-
-sh $PROJECT_PATH/metal_all.sh 
