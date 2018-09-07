@@ -3,10 +3,9 @@
 
 # RUNNING AND EVALUATING A SINGLE MODEL 
 
-export PROJECT_PATH=.../NeuroTagger
-export REPORT_PATH=.../NeuroTagger/reports
-export WORD_EMBEDDING_PATH=...
-
+export PROJECT_PATH=/home/benjamin/parsing/NeuroTagger
+export REPORT_PATH=/home/benjamin/parsing/NeuroTagger/reports
+export WORD_EMBEDDING_PATH=/home/benjamin/parsing/NeuroTagger/word_embedding/fasttext_vector
 source activate tagger
 
 MODEL_ID=model
